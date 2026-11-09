@@ -3,11 +3,11 @@ import {
   ArrowRight,
   Check,
   Menu,
-  X,
-  Star,
   Shield,
-  Zap,
   Sparkles,
+  Star,
+  X,
+  Zap,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -81,6 +81,78 @@ function App() {
           </div>
         )}
       </header>
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="relative mx-auto max-w-6xl px-4 py-20">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="text-6xl font-extrabold"
+          >
+            Acelere sua presença online com uma landing{" "}
+            <span className="bg-linear-to-r from-fuchsia-400 to-violet-300 bg-clip-text text-transparent">
+              simples e eficaz
+            </span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="mt-4 max-w-2xl text-slate-600"
+          >
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio est
+            nesciunt inventore, facilis possimus magni consequatur laboriosam.
+            Incidunt ut dignissimos, facilis sint, perferendis labore, corrupti
+            maiores aliquam rem voluptates fuga!
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="mt-8 flex flex-row gap-3"
+          >
+            <a
+              href="#"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-fuchsia-600 px-6 py-3 font-medium transition hover:bg-fuchsia-700"
+            >
+              Comece Agora <ArrowRight className="size-4" />
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 px-6 py-3 font-medium transition hover:bg-white/5"
+            >
+              Ver Recursos
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-14 grid grid-cols-3 gap-4"
+          >
+            {["Velocidade", "Segurança", "Conversão"].map((label, i) => (
+              <div
+                className="bg-white[0.02] rounded-2xl border border-white/10 p-6"
+                key={label}
+              >
+                <div className="flex items-center gap-3">
+                  {i == 0 && <Zap className="size-5 text-emerald-400" />}
+                  {i == 1 && <Shield className="size-5 text-sky-400" />}
+                  {i == 2 && <Star className="size-5 text-amber-400" />}
+                  <div className="font-semibold">{label}</div>
+                </div>
+                <p className="mt-2 text-sm text-slate-400">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Incidunt est odit assumenda quo quasi saepe cumque hic error,
+                  ipsa aliquid, sequi laboriosam excepturi sit rerum! Sit
+                  maiores eius deleniti eaque.
+                </p>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 }
