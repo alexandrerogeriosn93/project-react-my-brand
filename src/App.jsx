@@ -125,6 +125,32 @@ function App() {
               Ver Recursos
             </a>
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-14 grid grid-cols-3 gap-4"
+          >
+            {["Velocidade", "Segurança", "Conversão"].map((label, i) => (
+              <div
+                className="bg-white[0.02] rounded-2xl border border-white/10 p-6"
+                key={label}
+              >
+                <div className="flex items-center gap-3">
+                  {i == 0 && <Zap className="size-5 text-emerald-400" />}
+                  {i == 1 && <Shield className="size-5 text-sky-400" />}
+                  {i == 2 && <Star className="size-5 text-amber-400" />}
+                  <div className="font-semibold">{label}</div>
+                </div>
+                <p className="mt-2 text-sm text-slate-400">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Incidunt est odit assumenda quo quasi saepe cumque hic error,
+                  ipsa aliquid, sequi laboriosam excepturi sit rerum! Sit
+                  maiores eius deleniti eaque.
+                </p>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
     </div>
