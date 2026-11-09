@@ -208,6 +208,33 @@ function App() {
           ))}
         </div>
       </section>
+      {/* Testimonials */}
+      <section id="testimonials" className="mx-auto max-w-6xl px-4 py-8">
+        <h2 className="text-3xl font-bold">Quem usou, aprovou</h2>
+        <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <blockquote
+              key={i}
+              className="rounded-2xl border border-white/10 p-6"
+            >
+              <div className="flex items-center gap-2 text-amber-400">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="size-4 fill-current" />
+                ))}
+              </div>
+              <p className="mt-3 text-slate-300">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum non nisi soluta sequi perspiciatis inventore. In,
+                libero ipsam nostrum earum adipisci ipsa laudantium eveniet a
+                magni natus facere odio minima.
+              </p>
+              <footer className="mt-3 text-sm text-slate-400">
+                - Nome do Cliente
+              </footer>
+            </blockquote>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
