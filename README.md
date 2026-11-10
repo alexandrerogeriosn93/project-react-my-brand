@@ -1,16 +1,87 @@
-# React + Vite
+# React My Brand
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive landing page built with React and Vite. It includes a navigation
+menu, hero section, feature cards, testimonials, pricing, and a footer.
 
-Currently, two official plugins are available:
+## Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Project preview](.github/preview.png)
 
-## React Compiler
+## Technologies
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** for the UI and component state.
+- **Vite 8** for the development server and production build.
+- **Tailwind CSS 4** for utility-first styling, integrated through the Vite
+  plugin.
+- **Framer Motion** for animated elements.
+- **Lucide React** for icons.
+- **ESLint** with React Hooks and React Refresh plugins for code linting.
+- **Prettier** with import-sorting and Tailwind CSS plugins for formatting.
 
-## Expanding the ESLint configuration
+## Project structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+project-react-my-brand/
+├── .github/
+│   └── preview.png          # Project screenshot
+├── public/
+│   ├── favicon.svg          # Browser favicon
+│   └── icons.svg            # Public SVG icons
+├── src/
+│   ├── assets/
+│   │   ├── hero.png         # Landing page image asset
+│   │   ├── react.svg        # React asset
+│   │   └── vite.svg         # Vite asset
+│   ├── App.jsx              # Landing page UI and interactions
+│   ├── index.css            # Tailwind import and global styles
+│   └── main.jsx             # React application entry point
+├── .editorconfig            # Editor configuration
+├── .gitignore               # Git ignore rules
+├── .prettierrc              # Prettier configuration
+├── eslint.config.js         # ESLint configuration
+├── index.html               # HTML entry point
+├── package-lock.json        # Locked npm dependency versions
+├── package.json             # Dependencies and npm scripts
+└── vite.config.js           # Vite, React, and Tailwind plugin setup
+```
+
+## Getting started
+
+### Requirements
+
+- Node.js
+- npm
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL printed by Vite in your browser.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+The optimized static files are generated in the `dist/` directory.
+
+### Preview the production build locally
+
+```bash
+npm run preview
+```
+
+### Run the linter
+
+```bash
+npm run lint
+```
