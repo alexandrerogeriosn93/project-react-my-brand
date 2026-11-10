@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   Check,
+  Clock,
   Menu,
   Shield,
   Sparkles,
@@ -233,6 +234,45 @@ function App() {
               </footer>
             </blockquote>
           ))}
+        </div>
+      </section>
+      {/* Pricing */}
+      <section id="pricing" className="mx-auto max-w-6xl px-4 py-8">
+        <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
+          <div>
+            <h2 className="text-3xl font-bold">Plano único, Sem Complicação</h2>
+            <p className="mt-4 max-w-2xl text-slate-300">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+              dolores, iste itaque, cumque unde ab recusandae asperiores
+              perferendis officiis incidunt delectus ratione corrupti optio non
+              possimus. Doloribus soluta voluptas qui.
+            </p>
+            <ul className="mt-4 space-y-2 text-sm text-slate-300">
+              <li className="flex items-center gap-2">
+                <Check className="size-4 text-emerald-400" /> Benefício 1
+              </li>
+              <li className="flex items-center gap-2">
+                <Check className="size-4 text-emerald-400" /> Benefício 2
+              </li>
+              <li className="flex items-center gap-2">
+                <Check className="size-4 text-emerald-400" /> Benefício 3
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-white/2 p-8">
+            <div className="text-sm text-slate-400">A partir de</div>
+            <div className="mt-2 text-5xl font-extrabold">R$199,90</div>
+            <div className="mt-4 flex items-center gap-2 text-sm text-slate-300">
+              <Clock className="size-4 text-amber-400" />
+              <p>Somente hoje!</p>
+            </div>
+            <button
+              href="#"
+              className="mt-6 cursor-pointer rounded-2xl bg-fuchsia-600 px-6 py-3 font-medium transition hover:bg-fuchsia-800"
+            >
+              Comprar agora
+            </button>
+          </div>
         </div>
       </section>
     </div>
