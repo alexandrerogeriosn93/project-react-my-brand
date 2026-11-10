@@ -275,6 +275,15 @@ function App() {
           </div>
         </div>
       </section>
+      {/* Footer */}
+      <footer className="border-t border-white/5">
+        <div className="mx-auto flex max-w-6xl flex-col items-center px-4 py-8">
+          <div className="mb-4">Minha Marca @ {new Date().getFullYear()}</div>
+          <a href="#" className="text-slate-300">
+            Política de Privacidade
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
